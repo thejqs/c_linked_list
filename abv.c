@@ -8,9 +8,10 @@ void set_name(ABV* abv, char name[])
   abv->beverage_name[MAX_NAME_CHARS] = '\0';
 }
 
-char* get_name(ABV const* abv)
+void get_name(ABV const* abv, char* out_name)
 {
-  return NULL;
+  strncpy(out_name, abv->beverage_name, MAX_NAME_CHARS);
+  out_name[MAX_NAME_CHARS] = '\0';
 }
 
 void set_abv(ABV* abv, float new_abv)
@@ -20,5 +21,5 @@ void set_abv(ABV* abv, float new_abv)
 
 float get_abv(ABV const* abv)
 {
-  return 0.0;
+  return abv->alcohol_by_volume;
 }

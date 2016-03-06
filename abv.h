@@ -10,7 +10,7 @@ typedef struct
 }  ABV;
 
 void set_name(ABV* abv, char name[]);
-char* get_name(ABV const* abv);
+void get_name(ABV const* abv, char* out_name);
 
 void set_abv(ABV* abv, float new_abv);
 float get_abv(ABV const* abv);
