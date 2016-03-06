@@ -1,10 +1,12 @@
 #ifndef __ABV_H__
 #define __ABV_H__
 
+#define MAX_NAME_CHARS 99
+
 typedef struct
 {
-  char* beverage_name;
-  float abv;
+  char beverage_name[MAX_NAME_CHARS + 1];
+  float alcohol_by_volume;
 }  ABV;
 
 void set_name(ABV* abv, char name[]);
