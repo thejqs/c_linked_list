@@ -1,11 +1,12 @@
 #include <stdio.h>
+
 #include "abv.h"
 #include "abv_node.h"
 
 int main(int argc, char* argv[])
 {
   ABV my_abv;
-  set_name(&my_abv, "Jack");
+  set_name(&my_abv, "Most bourbons, honestly,");
   set_alcohol_by_volume(&my_abv, 40.0f);
 
   ABV_NODE my_node;

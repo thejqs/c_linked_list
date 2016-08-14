@@ -7,7 +7,7 @@ typedef struct
 {
   char beverage_name[MAX_NAME_CHARS + 1];
   float alcohol_by_volume;
-}  ABV;
+} ABV;
 
 void set_name(ABV* abv, char name[]);
 void get_name(ABV const* abv, char* out_name);
