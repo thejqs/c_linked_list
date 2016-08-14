@@ -12,7 +12,7 @@ typedef struct
 void set_name(ABV* abv, char name[]);
 void get_name(ABV const* abv, char* out_name);
 
-void set_abv(ABV* abv, float new_abv);
-float get_abv(ABV const* abv);
+void set_alcohol_by_volume(ABV* abv, float new_abv);
+float get_alcohol_by_volume(ABV const* abv);
 
 #endif
