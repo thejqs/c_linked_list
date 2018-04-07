@@ -10,6 +10,14 @@ ABV_NODE* create_new_end_node(ABV const* abv)
     return node;
 }
 
+void enumerate(ABV_LIST* list, ABV_ENUMERATE_FUNC func) {
+    ABV_NODE *current = list;
+    while (current != NULL) {
+        func(&current->abv);
+        current = (ABV_NODE *)get_next(current);
+    }
+}
+
 ABV_LIST* create_list(ABV const* abv)
 {
     return create_new_end_node(abv);

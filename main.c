@@ -4,6 +4,10 @@
 // #include "abv_node.h"
 #include "abv_list.h"
 
+void print_abv(ABV const* abv) {
+    printf("Name: %s\nABV: %0.1f\n", abv->beverage_name, abv->alcohol_by_volume);
+}
+
 int main(int argc, char* argv[])
 {
   ABV my_abv;
@@ -23,6 +27,7 @@ int main(int argc, char* argv[])
 
   extend_list(my_list, &my_other_abv);
   extend_list(my_list, &yet_another_abv);
+  enumerate(my_list, print_abv);
   destroy_list(my_list);
   return 0;
 }
