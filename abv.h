@@ -14,5 +14,6 @@ void get_name(ABV const* abv, char* out_name);
 
 void set_alcohol_by_volume(ABV* abv, float new_abv);
 float get_alcohol_by_volume(ABV const* abv);
+void print_abv(ABV const* abv);
 
 #endif

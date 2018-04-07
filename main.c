@@ -4,10 +4,6 @@
 // #include "abv_node.h"
 #include "abv_list.h"
 
-void print_abv(ABV const* abv) {
-    printf("Name: %s\nABV: %0.1f\n", abv->beverage_name, abv->alcohol_by_volume);
-}
-
 int main(int argc, char* argv[])
 {
   ABV my_abv;
