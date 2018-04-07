@@ -17,7 +17,12 @@ int main(int argc, char* argv[])
   set_name(&my_other_abv, "Wally");
   set_alcohol_by_volume(&my_other_abv, 80.0f);
 
+  ABV yet_another_abv;
+  set_name(&yet_another_abv, "CHARTREUSE BIIIIITCH");
+  set_alcohol_by_volume(&yet_another_abv, 38.7f);
+
   extend_list(my_list, &my_other_abv);
+  extend_list(my_list, &yet_another_abv);
   destroy_list(my_list);
   return 0;
 }
