@@ -3,16 +3,18 @@
 
 #include "abv.h"
 
-typedef struct
+struct abv_node
 {
     ABV abv;
-    struct ABV_NODE* next;
-} ABV_NODE;
+    struct abv_node* next;
+};
+
+typedef struct abv_node ABV_NODE;
 
 void set_abv(ABV_NODE* node, ABV const* abv);
 ABV get_abv(ABV_NODE const* node);
 
 void set_next(ABV_NODE* node, ABV_NODE const* next);
-struct ABV_NODE const* get_next(ABV_NODE const* node);
+ABV_NODE const* get_next(ABV_NODE const* node);
 
 #endif

@@ -19,10 +19,10 @@ ABV get_abv(ABV_NODE const* node)
 void set_next(ABV_NODE* node, ABV_NODE const* next)
 {
     assert(node != NULL);
-    node->next = (struct ABV_NODE *)next;
+    node->next = (ABV_NODE *)next;
 }
 
-struct ABV_NODE const* get_next(ABV_NODE const* node)
+ABV_NODE const* get_next(ABV_NODE const* node)
 {
     assert(node != NULL);
     return node->next;
