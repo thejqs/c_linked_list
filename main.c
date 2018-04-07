@@ -14,7 +14,7 @@ int main(int argc, char* argv[])
   ABV_LIST* my_list = create_list(&my_abv);
 
   ABV my_other_abv;
-  set_name(&my_other_abv, "John");
+  set_name(&my_other_abv, "Wally");
   set_alcohol_by_volume(&my_other_abv, 80.0f);
 
   extend_list(my_list, &my_other_abv);
