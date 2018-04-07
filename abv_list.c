@@ -25,7 +25,7 @@ void extend_list(ABV_LIST* list, ABV const* abv)
 {
     ABV_NODE *current = list;
     while (get_next(current) != NULL) {
-        set_next(current, (const ABV_NODE *)current->next);
+        current = (ABV_NODE *)get_next(current);
     }
     ABV_NODE *node = create_new_end_node(abv);
     set_next(current, node);
