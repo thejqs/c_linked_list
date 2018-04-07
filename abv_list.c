@@ -17,8 +17,13 @@ ABV_LIST* create_list(ABV const* abv)
 
 void destroy_list(ABV_LIST* list)
 {
-    free(list->next);
-    free(list);
+    ABV_NODE *head = list;
+    ABV_NODE *current = head;
+    while (head != NULL) {
+        head = (ABV_NODE *)get_next(head);
+        free(current);
+        current = head;
+    }
 }
 
 void extend_list(ABV_LIST* list, ABV const* abv)
