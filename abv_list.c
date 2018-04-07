@@ -17,6 +17,7 @@ ABV_LIST* create_list(ABV const* abv)
 
 void destroy_list(ABV_LIST* list)
 {
+    free(list->next);
     free(list);
 }
 
