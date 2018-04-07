@@ -2,15 +2,26 @@
 
 #include "abv_list.h"
 
+ABV_NODE* create_new_end_node(ABV const* abv)
+{
+    ABV_NODE *node = malloc(sizeof(ABV_NODE));
+    set_abv(node, abv);
+    set_next(node, NULL);
+    return node;
+}
+
 ABV_LIST* create_list(ABV const* abv)
 {
-    ABV_NODE* head = malloc(sizeof(ABV_NODE));
-    set_abv(head, abv);
-    set_next(head, NULL);
-    return head;
+    return create_new_end_node(abv);
 }
 
 void destroy_list(ABV_LIST* list)
 {
     free(list);
+}
+
+void extend_list(ABV_LIST* list, ABV const* abv)
+{
+    ABV_NODE* node = create_new_end_node(abv);
+    set_next(list, node);
 }
